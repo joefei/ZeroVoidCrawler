@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
+import com.sun.xml.internal.bind.v2.TODO;
 
 /**
  * 
@@ -15,21 +16,25 @@ import java.util.regex.Pattern;
 public class CharFinder {
 
 	// 使用正则表达式
-	public String regular() {
-		// 定义一个样式模板，此中使用正则表达式，括号中是要抓的内容  
-		// 相当于埋好了陷阱匹配的地方就会掉下去 
-		Pattern pattern = Pattern.compile("href=\"(.+?)\"");  
-		// 定义一个matcher用来做匹配  
-		java.util.regex.Matcher matcher = pattern.matcher("＜a href=\"index.html\"＞我的主页＜/a＞");  
-		// 如果找到了  
-		if (matcher.find()) {  
-		    // 打印出结果  
-		    System.out.println(matcher.group(1));  
-		}  
-		return "";
+	public ArrayList<String> regular(String targetString, String patternString) {
+		ArrayList<String> results = new ArrayList<String>();
+		// 定义一个样式模板，此中使用正则表达式，括号中是要抓的内容
+		// 相当于埋好了陷阱匹配的地方就会掉下去
+		Pattern pattern = Pattern.compile(patternString);
+		// 定义一个matcher用来做匹配
+		java.util.regex.Matcher matcher = pattern.matcher(targetString);
+		boolean isFind = matcher.find();
+		// 使用循环将句子里所有的kelvin找出并替换再将内容加到sb里
+		while (isFind) {
+			// 添加成功匹配的结果
+			results.add(matcher.group(1)+"\n");
+			// 继续查找下一个匹配对象
+			isFind = matcher.find();
+		}
+		return results;
 	}
 
-	//使用indexOf和substring();
+	// 使用indexOf和substring();
 	public String index(String source) {
 		String result = "";
 		ArrayList<HashMap<String, Integer>> list = new ArrayList<HashMap<String, Integer>>();

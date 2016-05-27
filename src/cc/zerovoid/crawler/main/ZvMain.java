@@ -1,5 +1,7 @@
 package cc.zerovoid.crawler.main;
 
+import java.util.ArrayList;
+
 import cc.zerovoid.crawler.util.CharFinder;
 import cc.zerovoid.crawler.util.HttpUtil;
 
@@ -20,11 +22,16 @@ public class ZvMain {
 		// 定义即将访问的链接
 		// String url =
 		// "http://freewgf.blog.163.com/blog/static/1973828682015961330887/";
-		String url = "http://www.baidu.com";
+		// String url = "http://www.baidu.com";
+		String url = "http://www.zhihu.com/explore/recommendations";
 		// 定义一个字符串用来存储网页内容
 		String result = new HttpUtil().request(url);
-		System.out.println(new CharFinder().index(result));
-		new CharFinder().regular();
+//		System.out.println(result);
+//		System.out.println(new CharFinder().index(result));
+//		System.out.println(new CharFinder().regular(result, "src=\"(.+?)\""));
+		ArrayList<String> imgSrc=new CharFinder().regular(result, "question_link.+?>(.+?)<");
+		System.out.println(imgSrc);
+		
 	}
 
 }
