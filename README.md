@@ -3,7 +3,9 @@
 Java网络爬虫练习；
 
 参考文章：
-[Java]知乎下巴第1集：爬虫世界百度不仅仅可以拿来测网速 - 汪海的实验室 - 博客频道 - CSDN.NET  http://blog.csdn.net/pleasecallmewhy/article/details/17594303
+[Java]知乎下巴第1集：爬虫世界百度不仅仅可以拿来测网速 - 汪海的实验室 - 博客频道 - CSDN.NET  
+（1）  http://blog.csdn.net/pleasecallmewhy/article/details/17594303
+（2）  http://blog.csdn.net/pleasecallmewhy/article/details/17630063
 
 反爬虫四个基本策略_bobo_新浪博客  http://blog.sina.com.cn/s/blog_463041490102v7if.html
 

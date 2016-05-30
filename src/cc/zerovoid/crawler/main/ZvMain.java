@@ -2,7 +2,7 @@ package cc.zerovoid.crawler.main;
 
 import java.util.ArrayList;
 
-import cc.zerovoid.crawler.util.CharFinder;
+import cc.zerovoid.crawler.util.ZvSpider;
 import cc.zerovoid.crawler.util.HttpUtil;
 
 /**
@@ -26,10 +26,10 @@ public class ZvMain {
 		String url = "http://www.zhihu.com/explore/recommendations";
 		// 定义一个字符串用来存储网页内容
 		String result = new HttpUtil().request(url);
-//		System.out.println(result);
+		System.out.println(result);
 //		System.out.println(new CharFinder().index(result));
 //		System.out.println(new CharFinder().regular(result, "src=\"(.+?)\""));
-		ArrayList<String> imgSrc=new CharFinder().regular(result, "question_link.+?>(.+?)<");
+		ArrayList<String> imgSrc=new ZvSpider().regular(result, "question_link.+?>(.+?)<");
 		System.out.println(imgSrc);
 		
 	}

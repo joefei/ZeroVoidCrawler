@@ -4,16 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 /**
  * 
  * @author 绯若虚无
  * 
- * @version 绯若寻踪①号
+ * @version 虚无蜘蛛①号
  *
  */
-public class CharFinder {
+public class ZvSpider {
 
 	// 使用正则表达式
 	public ArrayList<String> regular(String targetString, String patternString) {

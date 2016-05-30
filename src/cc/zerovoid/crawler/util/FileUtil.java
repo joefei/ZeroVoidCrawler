@@ -4,7 +4,7 @@ package cc.zerovoid.crawler.util;
  * 
  * @author Administrator
  *
- * @version 绯若文①号 
+ * @version 虚无文①号 
  */
 public class FileUtil {
 
