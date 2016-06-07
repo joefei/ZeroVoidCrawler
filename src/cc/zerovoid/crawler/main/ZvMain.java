@@ -1,8 +1,6 @@
 package cc.zerovoid.crawler.main;
 
-import java.util.ArrayList;
-
-import cc.zerovoid.crawler.util.ZvSpider;
+import cc.zerovoid.crawler.control.ZhihuSpider;
 import cc.zerovoid.crawler.util.HttpUtil;
 
 /**
@@ -29,8 +27,8 @@ public class ZvMain {
 		System.out.println(result);
 //		System.out.println(new CharFinder().index(result));
 //		System.out.println(new CharFinder().regular(result, "src=\"(.+?)\""));
-		ArrayList<String> imgSrc=new ZvSpider().regular(result, "question_link.+?>(.+?)<");
-		System.out.println(imgSrc);
+//		ArrayList<String> imgSrc=new ZvSpider().regular(result, "question_link.+?>(.+?)<");
+		System.out.println(ZhihuSpider.getZhiHu(result));
 		
 	}
 
